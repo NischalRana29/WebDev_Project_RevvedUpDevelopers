@@ -49,7 +49,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('/image/koenigsegg.jpg');
+    background-image: url('image/koenigsegg.jpg');
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat; 
