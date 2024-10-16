@@ -224,6 +224,29 @@ body {
 }
 /* end of Contact Section */
 
+/* about us section */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.signature-humor {
+    font-style: italic;
+    color: #555;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+
 
 /* Media Queries for Responsiveness */
 
@@ -238,7 +261,7 @@ body {
     }
 
     .car-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet view */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .nav-links {
@@ -270,10 +293,23 @@ body {
     }
 
     .car-grid {
-        grid-template-columns: 1fr; /* 1 column for mobile view */
+        grid-template-columns: 1fr;
     }
 
     .car-collection h2 {
         font-size: 28px;
+    }
+
+    /* Update Car of the Week Section */
+    .car-content {
+        flex-direction: column; /* Make the image stack on top of the paragraph */
+    }
+
+    .car-image {
+        margin-bottom: 20px; /* Add spacing between image and text */
+    }
+
+    .car-description {
+        padding-left: 0; /* Remove the left padding in mobile view */
     }
 }
