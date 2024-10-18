@@ -192,7 +192,7 @@ body {
 
 #contact {
     padding: 50px 20px;
-    background-image: url(../ae86.jpeg); /* Add your image path here */
+    background-image: url(../media/ae86.jpeg); /* Add your image path here */
     background-size: cover;      /* Ensures the image covers the entire section */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
