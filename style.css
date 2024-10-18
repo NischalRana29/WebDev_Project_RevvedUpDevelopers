@@ -151,20 +151,38 @@ body {
 
 #contact {
     padding: 50px 20px;
-    background-color: #f4f4f4;
+    background-image: url(../ae86.jpeg); /* Add your image path here */
+    background-size: cover;      /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: #FFFFFF;                /* Adjusts text color for better contrast */
     text-align: center;
+    position: relative;          /* Ensures other content layers properly */
 }
 
-#contact h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #333;
+#contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+    z-index: 1; /* Places the overlay below the content */
 }
+
+#contact h2,
+.contact-info,
+#contact-form {
+    position: relative;
+    z-index: 2; /* Ensures the content appears on top of the background */
+}
+
 
 .contact-info {
     font-size: 18px;
     line-height: 1.6;
-    color: #555;
+    color: #FFFFFF;
     margin-bottom: 40px;
 }
 
@@ -173,7 +191,7 @@ body {
 }
 
 .contact-info strong {
-    color: #333;
+    color: #FFFFFF;
 }
 
 #contact-form {
@@ -189,7 +207,7 @@ body {
 #contact-form label {
     margin: 10px 0 5px;
     font-size: 16px;
-    color: #333;
+    color: #FFFFFF;
 }
 
 #contact-form input[type="text"],
