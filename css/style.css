@@ -305,7 +305,33 @@ body {
     margin-bottom: 20px;
 }
 
+/* footer */
+footer {
+    background-color: #2c3e50; /* Dark background color */
+    color: white; /* Text color */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
 
+footer p {
+    margin: 5px 0; /* Spacing between paragraphs */
+}
+
+footer a {
+    color: #e74c3c; /* Social media link color */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+    color: #f1c40f; /* Change color on hover */
+}
+
+footer a i {
+    margin-right: 5px; /* Space between icon and text */
+}
 
 /* Media Queries for Responsiveness */
 
