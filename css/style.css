@@ -59,11 +59,11 @@ body {
 }
 
 .nav-links a:hover {
-    color: #FF7F50; /* Coral color for color-blind friendly design */
+    color: #FEFE86; /* Coral color for color-blind friendly design */
 }
 
 .nav-links a.active {
-    color: #FF7F50; /* Coral color for color-blind friendly design */
+    color: #FEFE86; /* Coral color for color-blind friendly design */
 }
 
 /* Hero Section */
