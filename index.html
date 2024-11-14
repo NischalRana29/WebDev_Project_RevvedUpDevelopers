@@ -13,15 +13,18 @@
 
 <body>
     <header class = "nav">
-        <div class = "nav-bar">
-            <nav>
-                <ul class = "nav-links">
-                    <li><a class="active" href = "index.html">Home</a></li>
-                    <li><a href = "pages/about.html">About Us</a></li>
-                    <li><a href = "pages/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="navbar">
+            <ul class = "nav-links">
+                <li class="nav-item"><a class = "active" href = "../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href = "./pages/about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href = "./pages/contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
     </header>
 
     <section class = "hero">
@@ -97,5 +100,7 @@
             </a>
         </p>
     </footer>    
+
+    <script src="./js/script.js"></script>
 </body>
 </html>

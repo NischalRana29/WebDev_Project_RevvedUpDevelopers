@@ -49,7 +49,7 @@ body {
 }
 
 .nav-links li {
-    margin-right: 20px;          /* Add more spacing between the nav links */
+    margin-right: 20px; /* Add more spacing between the nav links */
 }
 
 .nav-links a {
@@ -65,6 +65,25 @@ body {
 .nav-links a.active {
     color: #FEFE86; /* Coral color for color-blind friendly design */
 }
+
+/* additional for hamburger */
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+
 
 /* Hero Section */
 .hero {
@@ -371,8 +390,16 @@ footer a i {
     }
 
     .nav-links {
+        position: absolute;
+        top: 50px;
+        right: -100%;
+        gap: 0;
         flex-direction: column;
-        align-items: center;
+        background-color: #274689;
+        width: 50%;
+        text-align: center;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
     }
 
     .nav-links li {
@@ -407,4 +434,33 @@ footer a i {
     .car-description {
         padding-left: 0; /* Remove the left padding in mobile view */
     }
+
+
+    /* hamburger menu */
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-links.active {
+        right: 0%;
+    }
+
+    nav a {
+        padding: 0.5rem;
+    }
+
 }
