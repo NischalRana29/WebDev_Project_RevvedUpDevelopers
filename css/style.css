@@ -59,11 +59,11 @@ body {
 }
 
 .nav-links a:hover {
-    color: #FF7F50; /* Coral color for color-blind friendly design */
+    color: #FEFE86; /* Coral color for color-blind friendly design */
 }
 
 .nav-links a.active {
-    color: #FF7F50; /* Coral color for color-blind friendly design */
+    color: #FEFE86; /* Coral color for color-blind friendly design */
 }
 
 /* Hero Section */
@@ -73,7 +73,7 @@ body {
     background-position: center 50%;  
     background-repeat: no-repeat; 
     height: 80vh;                 
-    color: rgb(39, 23, 4);
+    color: rgb(255, 0, 102);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,12 +83,12 @@ body {
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 78px;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 24px;
+    font-size: 40px;
 }
 
 .section-divider {
@@ -188,6 +188,10 @@ body {
     font-size: 16px;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 /* Contact Section */
 
 #contact {
@@ -284,13 +288,19 @@ body {
 /* end of Contact Section */
 
 /* about us section */
+.about-us-section {
+    background-image: url('../media/bmw.jpg'); /* Update the path to your image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    padding: 40px 0; /* Add padding to the top and bottom of the section */
+}
+
 .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Optional: To position any elements inside if needed */
+    padding: 20px; /* Adjust padding as necessary */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Light background for readability */
+    border-radius: 8px; /* Optional: Adds rounded corners to the container */
 }
 
 .signature-humor {
@@ -305,7 +315,33 @@ body {
     margin-bottom: 20px;
 }
 
+/* footer */
+footer {
+    background-color: #043467; /* Dark background color */
+    color: white; /* Text color */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
 
+footer p {
+    margin: 5px 0; /* Spacing between paragraphs */
+}
+
+footer a {
+    color: #FCD9EB; /* Social media link color */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+    color: #f1c40f; /* Change color on hover */
+}
+
+footer a i {
+    margin-right: 5px; /* Space between icon and text */
+}
 
 /* Media Queries for Responsiveness */
 
