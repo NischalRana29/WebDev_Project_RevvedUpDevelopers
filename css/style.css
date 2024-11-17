@@ -83,8 +83,6 @@ body {
     background-color: #ffffff;
 }
 
-
-
 /* Hero Section */
 .hero {
     background-image: url('../media/koenigsegg.jpg');
@@ -441,6 +439,66 @@ footer a i {
 }
 
 /* Media Queries for Responsiveness */
+
+/* For desktops and laptops */
+@media (min-width: 768px) {
+
+    .hero {
+        height: 70vh; /* Adjust height for larger screens */
+        padding: 40px; /* Increase padding for better spacing */
+    }
+
+    .hero h1 {
+        font-size: 48px; /* Adjust font size for the heading */
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 24px; /* Adjust font size for the paragraph */
+        margin-bottom: 20px;
+    }
+
+    .car-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three-column layout */
+    }
+
+    .nav {
+        padding: 15px 30px; /* Adjust padding for navigation */
+    }
+
+    .car-collection h2 {
+        font-size: 48px; /* Larger heading for car collection */
+    }
+
+    .car-content {
+        flex-direction: row; /* Ensure horizontal layout for text and image */
+    }
+
+    .car-image img {
+        max-width: 100%; /* Adjust image size for larger screens */
+    }
+
+    .event-container {
+        grid-template-columns: repeat(4, 1fr); /* Four-column layout for events */
+    }
+
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form textarea {
+        font-size: 18px; /* Larger font size for form fields */
+    }
+
+    #contact-form input[type="submit"] {
+        padding: 16px 24px; /* Increase padding for better touch interaction */
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 16px; /* Larger footer font size */
+    }
+}
+
 /* For tablets and small laptops */
 @media (min-width: 600px) and (max-width: 1024px) {
     .hero {
@@ -516,16 +574,15 @@ footer a i {
     }
 
     .nav-links {
-        position: absolute;
+        position: absolute; /* Position the navigation off-screen */
         top: 60px; /* Below the hamburger menu */
-        right: -100%;
-        gap: 10px;
+        right: -100%; /* Hide the navigation off-screen */
+        gap: 10px; /* Add space between nav items */
         flex-direction: column; /* Stack nav items vertically */
         background-color: #274689; /* Keep navbar color consistent */
         width: 70%; /* Wider navigation menu */
         text-align: center;
-        transition: right 0.3s ease-in-out;
-        z-index: 1000;
+        transition: all 0.3s ease-in-out;
         padding: 20px; /* Add padding around the nav links */
     }
 
@@ -535,7 +592,39 @@ footer a i {
 
     .hamburger {
         display: block; /* Show hamburger menu */
-        margin: 10px; /* Add some space around it */
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0; /* Hide the middle bar when active */
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg); /* Turn into an "X" */
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg); /* Turn into an "X" */
+    }
+
+    .nav-links {
+        position: absolute; /* Position the navigation off-screen */
+        top: 60px; /* Below the hamburger menu */
+        right: -100%; /* Hide the navigation off-screen */
+        gap: 10px; /* Add space between nav items */
+        flex-direction: column; /* Stack nav items vertically */
+        background-color: #274689; /* Keep navbar color consistent */
+        width: 70%; /* Wider navigation menu */
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        padding: 20px; /* Add padding around the nav links */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Spacing between each nav link */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu */
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -552,6 +641,14 @@ footer a i {
 
     .nav-links.active {
         right: 0%; /* Slide the navigation into view */
+    }
+
+    nav a {
+        padding: 0.5rem; /* Adjust link padding */
+    }
+
+    .nav-item {
+        margin: 16px 0; /* Even spacing for nav items */
     }
 
     nav a {
