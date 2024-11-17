@@ -375,6 +375,14 @@ body {
     color: #222; /* Matches existing heading colors */
 }
 
+.event-card .event-image {
+    width: 100%; /* Ensures the image fills the card's width */
+    max-height: 200px; /* Adjusts the height of the image */
+    object-fit: cover; /* Keeps the image aspect ratio intact */
+    border-radius: 8px; /* Matches the card's rounded corners */
+    margin-bottom: 10px; /* Adds space between the image and the date */
+}
+
 .event-card .date {
     font-size: 1.2rem;
     font-weight: bold;
