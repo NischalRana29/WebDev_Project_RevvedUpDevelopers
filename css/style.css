@@ -641,6 +641,7 @@ footer a i {
     }
 
     .nav-links.active {
+        display: flex;
         right: 0%; /* Slide the navigation into view */
     }
 
