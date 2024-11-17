@@ -574,6 +574,7 @@ footer a i {
     }
 
     .nav-links {
+        display: none;
         position: absolute; /* Position the navigation off-screen */
         top: 60px; /* Below the hamburger menu */
         right: -100%; /* Hide the navigation off-screen */
