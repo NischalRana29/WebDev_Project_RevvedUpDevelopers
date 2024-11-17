@@ -441,8 +441,103 @@ footer a i {
 }
 
 /* Media Queries for Responsiveness */
+/* For mobile phones */
+@media (max-width: 600px) {
+    /* Navigation Bar */
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-/* For tablets and small laptops */
+    .nav-links {
+        flex-direction: column;
+        background-color: #274689; /* Full-width background for the dropdown */
+        width: 100%;
+        text-align: center;
+        position: static;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block; /* Enable hamburger menu */
+    }
+
+    .hero {
+        height: 60vh; /* Reduce height for mobile screens */
+    }    
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .car-grid {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+    }
+
+    .car-collection h2 {
+        font-size: 28px;
+    }
+
+    /* Update Car of the Week Section */
+    .car-content {
+        flex-direction: column;
+        text-align: center; /* Center-align text and image */
+    }
+
+    .car-image img {
+        width: 100%; /* Make the image take the full width */
+    }
+
+    .car-description {
+        padding-left: 0;
+        margin: 20px 0;
+    }
+
+    /* Contact Section */
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form textarea {
+        font-size: 14px;
+    }
+
+    #contact-form input[type="submit"] {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .contact-info {
+        font-size: 14px;
+    }
+    
+    #contact-form {
+        padding: 10px;
+    }    
+
+    /* Event Section */
+    .event-container {
+        grid-template-columns: 1fr; /* Stack event cards vertically */
+    }
+
+    .event-card {
+        width: 95%; /* Full width for event cards */
+    }
+
+    /*Footer*/
+    footer {
+        text-align: center;
+        font-size: 14px;
+    }    
+}
+
+
+/* For tablets and small laptops 
 @media (max-width: 1024px) {
     .hero h1 {
         font-size: 36px;
@@ -460,8 +555,8 @@ footer a i {
         font-size: 16px;
     }
 }
-
-/* For mobile phones */
+*/
+/* For mobile phones 
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -499,7 +594,7 @@ footer a i {
     .car-collection h2 {
         font-size: 28px;
     }
-
+*/
     /* Update Car of the Week Section */
     .car-content {
         flex-direction: column; /* Make the image stack on top of the paragraph */
@@ -541,4 +636,4 @@ footer a i {
         padding: 0.5rem;
     }
 
-}
+/*}*/
