@@ -441,7 +441,7 @@ footer a i {
 /* Media Queries for Responsiveness */
 
 /* For desktops and laptops */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
     .hero {
         height: 70vh; /* Adjust height for larger screens */
