@@ -334,6 +334,76 @@ body {
     margin-bottom: 20px;
 }
 
+/* Event Page Specific Styles */
+
+/* Main content styles for the Event page */
+#events {
+    max-width: 1200px;
+    margin: 40px auto; /* Center the content with top spacing */
+    text-align: center;
+    padding: 20px;
+}
+
+#events h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #222; /* Matches existing heading colors */
+}
+
+/* Event card container */
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Individual Event Cards */
+.event-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+}
+
+.event-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #222; /* Matches existing heading colors */
+}
+
+.event-card .date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0077cc; /* Highlighted date text color */
+    margin-bottom: 5px;
+}
+
+.event-card .location {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333; /* Consistent with text color */
+}
+
+.event-card .description {
+    font-size: 1rem;
+    color: #555; /* Subdued text color for descriptions */
+}
+
+/* Responsive Adjustments for Event Page */
+@media (max-width: 768px) {
+    .event-container {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    .event-card {
+        width: 90%; /* Reduce card width for better fit */
+    }
+}
+
 /* footer */
 footer {
     background-color: #043467; /* Dark background color */
