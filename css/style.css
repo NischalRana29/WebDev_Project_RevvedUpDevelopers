@@ -624,6 +624,10 @@ footer a i {
         margin: 10px 0; /* Spacing between each nav link */
     }
 
+    .nav-links a:hover {
+        color: #FEFE86; /* Change color on hover */
+    }
+
     .hamburger {
         display: block; /* Show hamburger menu */
     }
