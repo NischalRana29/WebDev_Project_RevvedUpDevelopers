@@ -665,7 +665,7 @@ footer a i {
         background-size: contain; /* Scale the image to fit within the hero area */
         background-position: top center; /* Adjust the focus to the top center */
         background-repeat: no-repeat; /* Prevent the image from repeating */
-        height: 50vh; /* Reduce the height for better proportion on smaller screens */
+        height: 30vh; /* Reduce the height for better proportion on smaller screens */
         padding: 20px; /* Maintain spacing for text */
     }
 
