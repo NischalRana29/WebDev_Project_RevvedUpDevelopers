@@ -441,163 +441,159 @@ footer a i {
 }
 
 /* Media Queries for Responsiveness */
-/* For mobile phones */
-@media (max-width: 600px) {
-    /* Navigation Bar */
-    .nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        background-color: #274689; /* Full-width background for the dropdown */
-        width: 100%;
-        text-align: center;
-        position: static;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .hamburger {
-        display: block; /* Enable hamburger menu */
-    }
-
+/* For tablets and small laptops */
+@media (min-width: 600px) and (max-width: 1024px) {
     .hero {
-        height: 60vh; /* Reduce height for mobile screens */
-    }    
+        background-size: cover; /* Ensures the image fills the section without cropping */
+        background-position: center center; /* Centers the image for a balanced view */
+        height: 60vh; /* Moderate height for tablets */
+        padding: 30px; /* Slightly more padding for spacing on larger screens */
+    }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 36px; /* Adjust font size for the heading */
+        line-height: 1.2;
+        margin-bottom: 20px;
     }
 
     .hero p {
-        font-size: 16px;
+        font-size: 18px; /* Slightly larger text for better readability */
+        margin-bottom: 20px;
     }
 
     .car-grid {
-        grid-template-columns: 1fr; /* Single column layout for mobile */
+        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    }
+
+    .nav-links {
+        font-size: 16px; /* Adjust navigation link size */
+    }
+
+    .nav {
+        padding: 10px 15px; /* Adjust padding for navigation */
     }
 
     .car-collection h2 {
-        font-size: 28px;
+        font-size: 32px; /* Slightly smaller heading for car collection */
     }
 
-    /* Update Car of the Week Section */
     .car-content {
-        flex-direction: column;
-        text-align: center; /* Center-align text and image */
+        flex-direction: row; /* Ensure horizontal layout for text and image */
     }
 
     .car-image img {
-        width: 100%; /* Make the image take the full width */
+        max-width: 90%; /* Adjust image size for tablet screens */
     }
 
-    .car-description {
-        padding-left: 0;
-        margin: 20px 0;
+    .event-container {
+        grid-template-columns: repeat(2, 1fr); /* Two-column layout for events */
     }
 
-    /* Contact Section */
     #contact-form input[type="text"],
     #contact-form input[type="email"],
     #contact-form textarea {
-        font-size: 14px;
+        font-size: 16px; /* Medium font size for form fields */
     }
 
     #contact-form input[type="submit"] {
-        font-size: 16px;
-        padding: 12px;
-    }
-
-    .contact-info {
-        font-size: 14px;
-    }
-    
-    #contact-form {
-        padding: 10px;
-    }    
-
-    /* Event Section */
-    .event-container {
-        grid-template-columns: 1fr; /* Stack event cards vertically */
-    }
-
-    .event-card {
-        width: 95%; /* Full width for event cards */
-    }
-
-    /*Footer*/
-    footer {
-        text-align: center;
-        font-size: 14px;
-    }    
-}
-
-
-/* For tablets and small laptops 
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero p {
+        padding: 14px 20px; /* Increase padding for better touch interaction */
         font-size: 18px;
     }
 
-    .car-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .nav-links {
-        font-size: 16px;
+    footer {
+        font-size: 14px; /* Reduce footer font size */
     }
 }
-*/
-/* For mobile phones 
-@media (max-width: 768px) {
+
+/* For mobile phones */
+/* Media query for mobile devices (width < 600px) */
+@media (max-width: 600px) {
+    /* Navigation Bar */
     nav {
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px; /* Reduce padding for smaller screens */
     }
 
     .nav-links {
         position: absolute;
-        top: 50px;
+        top: 60px; /* Below the hamburger menu */
         right: -100%;
-        gap: 0;
-        flex-direction: column;
-        background-color: #274689;
-        width: 50%;
+        gap: 10px;
+        flex-direction: column; /* Stack nav items vertically */
+        background-color: #274689; /* Keep navbar color consistent */
+        width: 70%; /* Wider navigation menu */
         text-align: center;
         transition: right 0.3s ease-in-out;
         z-index: 1000;
+        padding: 20px; /* Add padding around the nav links */
     }
 
     .nav-links li {
-        margin: 10px 0;
+        margin: 10px 0; /* Spacing between each nav link */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu */
+        margin: 10px; /* Add some space around it */
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0; /* Hide the middle bar when active */
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg); /* Turn into an "X" */
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg); /* Turn into an "X" */
+    }
+
+    .nav-links.active {
+        right: 0%; /* Slide the navigation into view */
+    }
+
+    nav a {
+        padding: 0.5rem; /* Adjust link padding */
+    }
+
+    .nav-item {
+        margin: 16px 0; /* Even spacing for nav items */
+    }
+
+    /* Hero Section */
+    .hero {
+        background-size: contain; /* Scale the image to fit within the hero area */
+        background-position: top center; /* Adjust the focus to the top center */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        height: 50vh; /* Reduce the height for better proportion on smaller screens */
+        padding: 20px; /* Maintain spacing for text */
     }
 
     .hero h1 {
-        font-size: 28px;
+        font-size: 24px; /* Adjust font size for the title */
+        line-height: 1.2;
+        margin-bottom: 10px;
     }
 
     .hero p {
-        font-size: 16px;
+        font-size: 14px; /* Adjust font size for the paragraph */
+        margin-bottom: 15px;
     }
 
+    /* Car Grid Section */
     .car-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column layout */
     }
 
     .car-collection h2 {
-        font-size: 28px;
+        font-size: 24px; /* Smaller font for the section heading */
     }
-*/
-    /* Update Car of the Week Section */
+
+    /* Car of the Week Section */
     .car-content {
-        flex-direction: column; /* Make the image stack on top of the paragraph */
+        flex-direction: column; /* Stack image and text vertically */
     }
 
     .car-image {
@@ -605,35 +601,60 @@ footer a i {
     }
 
     .car-description {
-        padding-left: 0; /* Remove the left padding in mobile view */
+        padding-left: 0; /* Remove padding in mobile view */
     }
 
-
-    /* hamburger menu */
-    .hamburger{
-        display: block;
-    }
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
+    .car-image img {
+        width: 100%; /* Ensure the image scales properly */
+        max-width: 400px; /* Limit the size for small devices */
+        height: auto; /* Maintain aspect ratio */
     }
 
-
-    .nav-item {
-        margin: 16px 0;
+    .car-description {
+        padding: 0 20px; /* Adds padding to both left and right */
     }
 
-    .nav-links.active {
-        right: 0%;
+    .car-description h2 {
+        margin-bottom: 10px; /* Optional: adds spacing between the heading and the paragraph */
     }
 
-    nav a {
-        padding: 0.5rem;
+    .car-description p {
+        text-align: justify; /* Optional: makes the text look cleaner by aligning it properly */
     }
 
-/*}*/
+    /* Events Section */
+    .event-container {
+        grid-template-columns: 1fr; /* Single column for events */
+    }
+
+    .event-card {
+        width: 90%; /* Adjust event card width for mobile screens */
+    }
+
+    /* Contact Section */
+    #contact {
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+
+    #contact h2 {
+        font-size: 24px; /* Smaller font for the heading */
+    }
+
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form textarea {
+        font-size: 14px; /* Adjust form input font size */
+        padding: 10px; /* Adjust padding for smaller inputs */
+    }
+
+    #contact-form input[type="submit"] {
+        font-size: 16px; /* Adjust font size for the button */
+        padding: 12px; /* Adjust padding for the button */
+    }
+
+    /* Footer */
+    footer {
+        font-size: 12px; /* Smaller font for footer text */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+}
